@@ -1,1 +1,7 @@
-# datalabs-aic
+## DataLabs AIC
+
+Members:
+
+-   Rakha
+-   Bintang
+-   Farhan
