@@ -1,0 +1,69 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "Hey",
+                "Hello"
+            ],
+            "responses": [
+                "Hello, Ada yang bisa Edubot bantu untuk masalah seputar karir?"
+            ]
+        },
+        {
+            "tag": "Goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye"
+            ],
+            "responses": [
+                "See you later, thanks for visiting us",
+                "See you, Goodluck!",
+                "Bye! Come back again soon"
+            ]
+        },
+        {
+            "tag": "Software Engineer",
+            "patterns": [
+                "Software Engineer",
+                "Software"
+            ],
+            "responses": [
+                "Software engineer merupakan pihak yang berperan dalam proses analisis kebutuhan dan desain pengguna, konstruksi, dan uji aplikasi. Role yang ada di software engineer contohnya seperti Web Developer, Android Developer, dll. Jika kami minat berkarir di software engineer, kamu ingin mengisi role dimana nih?"
+            ] 
+        },
+        {
+            "tag": "Web Developer",
+            "patterns": [
+                "Web Developer",
+                "Web"
+            ],
+            "responses": [
+                "Web developer adalah role yang mengatasi masalah pada bidang web. Web Developer juga ada bagiannya loh seperti Frontend Developer dan Backend Developer, Kamu lebih suka di bagian mana nih?"
+            ] 
+        },
+        {
+            "tag": "Frontend Developer",
+            "patterns": [
+                "Frontend Developer",
+                "Frontend"
+            ],
+            "responses": [
+                "Frontend Developer adalah bagian dari web developer yang tugasnya lebih ke arah tampilan yang ada di web supaya enak digunakan dan dirasakan oleh pengguna, Dasar bahasa pemrograman yang harus dikuasai oleh seorang frontend developer biasanya adalah HTML, CSS, dan Javascript. Untuk level selanjutnya kamu harus menguasai beberapa library dan framework seperti React.JS dan Vue.JS, Kira - Kira kamu ingin belajar yang Basic atau Expert nih?"
+            ] 
+        },
+        {
+            "tag": "Basic Frontend",
+            "patterns": [
+                "Basic Frontend Developer",
+                "Basic Frontend",
+                "Basic"
+            ],
+            "responses": [
+                "Dasar - dasar frontend seperti membuat web sederhana yang responsive di berbagai device, kamu bisa pelajari di course Basic Frontend - Link. Jika kamu berminat bisa klik link yang EduBot kirim ini ya!. Jika sudah selesai konsultasi kamu bisa ketik bye/thanks pada chat ini"
+            ] 
+        }
+    ]
+}
