@@ -1,27 +1,32 @@
-#Import 
+# Import
 import json
 import random
 import pickle
 import numpy as np
 import nltk
+from nltk_utils import tokenize, stemming, bag_of_words
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
 
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('intents.json').read())
 
-words = pickle.load(open('words.pkl','rb'))
-classes = pickle.load(open('classes.pkl','rb'))
+words = pickle.load(open('words.pkl', 'rb'))
+classes = pickle.load(open('classes.pkl', 'rb'))
 
 model = load_model('chatbot_model.h5')
 
+
 def preprocessing_input(sentence):
+    ignore_words = ['?', '!', '.', ',']
     sentence_words = nltk.word_tokenize(sentence)
-    sentence_words = [lemmatizer.lemmatize(w) for w in sentence_words]
+    sentence_words = [stemming(w)
+                      for w in sentence_words if w not in ignore_words]
     input_row = []
     for w in words:
         input_row.append(1) if w in sentence_words else input_row.append(0)
     return np.array(input_row)
+
 
 def predict_answer(sentence):
     input_row = preprocessing_input(sentence)
@@ -37,6 +42,7 @@ def predict_answer(sentence):
         intent_list.append({'intent': classes[r[0]], 'prob': str(r[1])})
     return intent_list
 
+
 def get_chat_response(sentence):
     intent_list = predict_answer(sentence)
     tag = intent_list[0]['intent']
@@ -46,6 +52,7 @@ def get_chat_response(sentence):
             chat_response = random.choice(i['responses'])
             break
     return chat_response
+
 
 while True:
     message = input("")
