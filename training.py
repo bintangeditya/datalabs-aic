@@ -44,7 +44,6 @@ for d in documents:
 
     output_row = list(output_empty)
     output_row[classes.index(d[0])] = 1
-
     # input_row = np.asarray(input_row).astype(np.float32)
     # output_row = np.asarray(output_row).astype(np.float32)
     training_data.append([input_row,output_row])
@@ -68,22 +67,25 @@ model = Sequential([
 sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(optimizer=sgd, loss="categorical_crossentropy", metrics=["accuracy"])
 
-history = model.fit(train_X, train_y, epochs=100, batch_size=5, verbose=1)
+history = model.fit(np.array(train_X), np.array(train_y), epochs=100, batch_size=5, verbose=1)
 
-def preprocessing_input(sentence):
-    sentence_words = nltk.word_tokenize(sentence)
-    sentence_words = [lemmatizer.lemmatize(w) for w in sentence_words]
-    input_row = []
-    for w in words:
-        input_row.append(1) if w in sentence_words else input_row.append(0)
-    return np.array(input_row)
+model.save("chatbot_model.h5", history)
+print("finished training :) yay")
 
-# results = model.predict(np.array([preprocessing_input("Web Developer")]))
+# def preprocessing_input(sentence):
+#     sentence_words = nltk.word_tokenize(sentence)
+#     sentence_words = [lemmatizer.lemmatize(w) for w in sentence_words]
+#     input_row = []
+#     for w in words:
+#         input_row.append(1) if w in sentence_words else input_row.append(0)
+#     return np.array(input_row)
+#
+# results = model.predict(np.array([preprocessing_input("See you later, thanks for visiting us")]))
 # temp = []
-# for i, v in enumerate(results):
+# for i, v in enumerate(results[0]):
 #     temp.append([v, classes[i]])
 # temp = sorted(temp, key=lambda x: x[0], reverse=True)
 # print(temp)
 # print(classes)
-model.save("chatbot_model.h5", history)
-print("finished training :) yay")
+
+

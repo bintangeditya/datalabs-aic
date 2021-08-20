@@ -27,22 +27,13 @@ def predict_answer(sentence):
     output = model.predict(np.array([input_row]))[0]
     ET = 0.2
     results = [[i, o] for i, o in enumerate(output) if o > ET]
-    #[1 0 0 0 0 0 0 0]
+
     results.sort(key=lambda x: x[1], reverse=True)
 
     intent_list = []
 
     for r in results:
         intent_list.append({'intent': classes[r[0]], 'prob': str(r[1])})
-
-    # print(results)
-    # print(intent_list)
-    temp = []
-    for i, v in enumerate(results):
-        temp.append([v, classes[i]])
-    temp = sorted(temp, key=lambda x: x[0], reverse=True)
-    # print(temp)
-
     return intent_list
 
 def get_chat_response(sentence):
@@ -55,10 +46,6 @@ def get_chat_response(sentence):
             break
     return chat_response
 
-
-
-# predict_answer("Saya mau belajar tentang Web Developer")
-
 while True:
     message = input("")
-    print(get_chat_response("message"))
+    print(get_chat_response(message))

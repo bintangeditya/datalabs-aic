@@ -3,7 +3,7 @@
         {
             "tag": "greeting",
             "patterns": [
-                "Hi",
+                "Bye",
                 "Hey",
                 "Hello"
             ],
@@ -12,7 +12,7 @@
             ]
         },
         {
-            "tag": "Goodbye",
+            "tag": "goodbye",
             "patterns": [
                 "Bye",
                 "See you later",
@@ -25,7 +25,7 @@
             ]
         },
         {
-            "tag": "Software Engineer",
+            "tag": "software_engineer",
             "patterns": [
                 "Software Engineer",
                 "Software"
@@ -35,7 +35,7 @@
             ] 
         },
         {
-            "tag": "Web Developer",
+            "tag": "web_developer",
             "patterns": [
                 "Web Developer",
                 "Web"
@@ -45,7 +45,7 @@
             ] 
         },
         {
-            "tag": "Frontend Developer",
+            "tag": "frontend_developer",
             "patterns": [
                 "Frontend Developer",
                 "Frontend"
@@ -55,7 +55,7 @@
             ] 
         },
         {
-            "tag": "Basic Frontend",
+            "tag": "basic_frontend",
             "patterns": [
                 "Basic Frontend Developer",
                 "Basic Frontend",
