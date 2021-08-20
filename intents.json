@@ -3,24 +3,24 @@
         {
             "tag": "greeting",
             "patterns": [
-                "Bye",
+                "Hi",
                 "Hey",
-                "Hello"
+                "Hello",
+                "Hai"
             ],
             "responses": [
-                "Hello, Ada yang bisa Edubot bantu untuk masalah seputar karir?"
+                "Hello, Ada yang bisa Edubot bantu untuk masalah seputar karir?",
+                "Terima kasih sudah menghubungi DatalabsBot, apakah ada yang bisa aku bantu terkait masalah seputar karir?"
             ]
         },
         {
             "tag": "goodbye",
             "patterns": [
-                "Bye",
-                "See you later",
-                "Goodbye"
+                "Bye"
             ],
             "responses": [
-                "See you later, thanks for visiting us",
-                "See you, Goodluck!",
+                "Selamat tinggal dan terima kasih telah menghubungi",
+                "Semoga sukses, tetap semangat dan jangan menyerah!",
                 "Bye! Come back again soon"
             ]
         },
