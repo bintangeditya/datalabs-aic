@@ -3,7 +3,6 @@
         {
             "tag": "greeting",
             "patterns": [
-                "Bye",
                 "Hey",
                 "Hello"
             ],
@@ -64,6 +63,21 @@
             "responses": [
                 "Dasar - dasar frontend seperti membuat web sederhana yang responsive di berbagai device, kamu bisa pelajari di course Basic Frontend - Link. Jika kamu berminat bisa klik link yang EduBot kirim ini ya!. Jika sudah selesai konsultasi kamu bisa ketik bye/thanks pada chat ini"
             ] 
+        },
+        {
+            "tag": "coba",
+            "patterns": [
+                "memotong",
+                "mendaki",
+                "Basic"
+            ],
+            "responses": [
+                "random 1",
+                "random 2",
+                "random 3",
+                "random 4",
+                "random 5"
+            ]
         }
     ]
 }
