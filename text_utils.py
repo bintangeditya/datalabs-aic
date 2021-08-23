@@ -1,16 +1,10 @@
-import json
-import random
-import pickle
-import numpy as np
-# import nltk
-# from nltk.stem import WordNetLemmatizer
-from tensorflow.keras.models import load_model
 import pandas as pd
 import re
 import string
 from nltk.corpus import stopwords
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from nltk.tokenize import word_tokenize
+import numpy as np
 
 stopwords_indonesia = stopwords.words('indonesian')
 factory = StemmerFactory()
@@ -47,7 +41,8 @@ emoticons = emoticons_happy.union(emoticons_sad)
 # lemmatizer = WordNetLemmatizer()
 
 def preprocessing(content):
-    print("sebelum ", word_tokenize(content))
+    print("-----text_utils.py:preprocessing---------------------------------")
+    print("sebelum : ", word_tokenize(content))
 
     content = content.strip(" ")  # menghapus karakter spasi pada awal dan akhir kalimat
 
@@ -85,20 +80,12 @@ def preprocessing(content):
             stem_word = stemmer.stem(word)  # mengubah ke kata dasar. proses stemming
             content_clean.append(stem_word)
 
-    print("sesudah ", content_clean)
+    print("sesudah : ", content_clean)
     print("-----------------------------------------------------------------")
     return content_clean
 
-# lemmatizer = WordNetLemmatizer()
 
-intents = json.loads(open('intents.json').read())
-
-words = pickle.load(open('words.pkl','rb'))
-classes = pickle.load(open('classes.pkl','rb'))
-
-model = load_model('chatbot_model2.h5')
-
-def vectorizer(sentence):
+def vectorizer(sentence,words):
     # sentence_words = nltk.word_tokenize(sentence)
     sentence_words = preprocessing(sentence)
 
@@ -107,30 +94,24 @@ def vectorizer(sentence):
         input_row.append(1) if w in sentence_words else input_row.append(0)
     return np.array(input_row)
 
-def predict_answer(sentence):
-    input_row = vectorizer(sentence)
-    output = model.predict(np.array([input_row]))[0]
-    ET = 0.2
-    results = [[i, o] for i, o in enumerate(output) if o > ET]
 
-    results.sort(key=lambda x: x[1], reverse=True)
 
-    intent_list = []
-
-    for r in results:
-        intent_list.append({'intent': classes[r[0]], 'prob': str(r[1])})
-    return intent_list
-
-def get_chat_response(sentence):
-    intent_list = predict_answer(sentence)
-    tag = intent_list[0]['intent']
-    chat_response = ""
-    for i in intents['intents']:
-        if tag == i['tag']:
-            chat_response = random.choice(i['responses'])
-            break
-    return chat_response
-
-while True:
-    message = input("")
-    print(get_chat_response(message))
+#snippet codingan-----------------------------------
+# def tokenize(sentence):
+#     return nltk.word_tokenize(sentence)
+#
+#
+# def stemming(word):
+#     factory = StemmerFactory()
+#     stemmer = factory.create_stemmer()
+#     return stemmer.stem(word)
+#
+#
+# def bag_of_words(tokenize_sentence, all_words):
+#     tokenize_sentence = [stemming(w) for w in tokenize_sentence]
+#     bag = np.zeros(len(all_words), dtype=np.float32)
+#     for idx, w in enumerate(all_words):
+#         if w in tokenize_sentence:
+#             bag[idx] = 1.0
+#
+#     return bag
