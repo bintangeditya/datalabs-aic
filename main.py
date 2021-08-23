@@ -1,6 +1,5 @@
 from flask import Flask
 from flask.globals import request
-import tensorflow as tf
 import json
 from datalabs_chatbot import get_chat_response
 
