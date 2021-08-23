@@ -21,8 +21,7 @@ def predict():
         "status": "success"
     }
     response_json = json.dumps(response)
-    print(response_json)
-    return get_chat_response(data)
+    return response_json
 
 
 if __name__ == "__main__":
