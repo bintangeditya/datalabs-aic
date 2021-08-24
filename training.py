@@ -14,7 +14,7 @@ stopwords_indonesia = stopwords.words('indonesian')
 factory = StemmerFactory()
 stemmer = factory.create_stemmer()
 
-intents = json.loads(open("intents.json").read())
+intents = json.loads(open("intents.json", encoding="utf8").read())
 
 words = []
 classes = []

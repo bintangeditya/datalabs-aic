@@ -5,7 +5,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 import text_utils as utils
 
-intents = json.loads(open('intents.json').read())
+intents = json.loads(open('intents.json', encoding="utf8").read())
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
 model = load_model('chatbot_model.h5')
@@ -48,6 +48,6 @@ def get_chat_response(sentence):
 
 
 # untuk testing chatbot
-while True:
-    message = input("")
-    print(get_chat_response(message))
+# while True:
+#     message = input("")
+#     print(get_chat_response(message))
