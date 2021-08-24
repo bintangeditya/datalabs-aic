@@ -1,11 +1,17 @@
 from flask import Flask
 from flask.globals import request
+from flask_cors import CORS
 import json
 from datalabs_chatbot import get_chat_response
 
 
 app = Flask(__name__)
-
+CORS(app)
+cors = CORS(app, resource={
+    r"/*":{
+        "origins":"*"
+    }
+})
 
 @app.route('/')
 def index():
