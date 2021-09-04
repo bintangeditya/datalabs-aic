@@ -71,7 +71,7 @@ def get_chat_response(sentence):
     return response_final
 
 
-# untuk testing chatbot
-while True:
-    message = input("")
-    print(get_chat_response(message))
+# # untuk testing chatbot
+# while True:
+#     message = input("")
+#     print(get_chat_response(message))
