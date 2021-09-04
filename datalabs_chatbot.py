@@ -45,6 +45,7 @@ def get_chat_response(sentence):
     response_final = {"res": chat_response,
                       "type": _type,
                       "tag": tag,
+                      "tag2": tag2,
                       "course": course,
                       "course2": course2}
     if len(intent_list) == 0:
