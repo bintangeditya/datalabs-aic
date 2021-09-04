@@ -39,6 +39,7 @@ def get_chat_response(sentence):
     chat_response = fallback_intent
     _type = "ngawur"
     tag = "ngawur"
+    tag2 = "ngawur"
     course = [1]
     course2 = [1]
     response_final = {"res": chat_response,
@@ -56,19 +57,21 @@ def get_chat_response(sentence):
             chat_response = random.choice(i['responses'])
             _type = i['type']
             tag = i['tag']
+            tag2 = i['tag2']
             course = i['course']
             course2 = i['course2']
             break
     response_final = {"res": chat_response,
                       "type": _type,
                       "tag": tag,
+                      "tag2": tag2,
                       "course": course,
                       "course2": course2}
 
     return response_final
 
 
-# # untuk testing chatbot
-# while True:
-#     message = input("")
-#     print(get_chat_response(message))
+# untuk testing chatbot
+while True:
+    message = input("")
+    print(get_chat_response(message))
