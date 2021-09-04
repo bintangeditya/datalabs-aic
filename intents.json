@@ -1,53 +1,94 @@
 {
     "intents":[{
+		"tag": "tidak",
+		"tag2": "tidak",
+		"patterns": [
+			"bintangfarhandikaedityatidak"
+		],
+		"responses": [
+			"tidak"
+		],
+		"type": "tidak",
+		"course" : [1],
+		"course2" : [1]
+	},{
+		"tag": "ya",
+		"tag2": "ya",
+		"patterns": [
+			"bintangfarhandikaedityaiya"
+		],
+		"responses": [
+			"ya"
+		],
+		"type": "ya",
+		"course" : [1],
+		"course2" : [1]
+	},{
 		"tag": "greeting",
+		"tag2": "greeting",
 		"patterns": [
 			"Hey",
 			"Hello",
 			"Hai",
 			"hi",
-			"Hola"
-
+			"Hola",
+			"halo",
+			"p"
 		],
 		"responses": [
-			"Hello, Ada yang bisa kami bantu untuk masalah seputar karir?"
-
-
-		]
+			"Hello, Ada yang bisa Raka bantu untuk masalah seputar karir?"
+		],
+		"type": "greet",
+		"course" : [1],
+		"course2" : [1]
 	},{
 		"tag": "goodbye",
+		"tag2": "goodbye",
 		"patterns": [
 			"Bye",
 			"See you later",
 			"Terima Kasih",
+			"TerimaKasih",
 			"sampai jumpa",
 			"thanks"
 		],
 		"responses": [
-			"Sampai jumpa lagi, terima kasih telah mengunjungi kami",
+			"Sampai jumpa lagi, ingat tetaplah berada dijalan kebenaran",
 			"See you, Goodluck!",
 			"Selamat tinggal! Segera kembali lagi"
-		]
+		],
+		"type": "greet",
+		"course" : [1],
+		"course2" : [1]
 	},{
 		"tag": "software_engineer",
+		"tag2": "Software Engineer",
 		"patterns": [
 			"Software Engineer",
 			"Software"
 		],
 		"responses": [
-			"Software engineer merupakan pihak yang berperan dalam proses analisis kebutuhan dan desain pengguna, konstruksi, dan uji aplikasi. Role yang ada di software engineer contohnya seperti Web Developer, Android Developer, dll. Jika kami minat berkarir di software engineer, kamu ingin mengisi role dimana nih?"
-		]
+			"Software engineer merupakan pihak yang berperan dalam proses analisis kebutuhan dan desain pengguna, konstruksi, dan uji aplikasi. Role yang ada di software engineer contohnya seperti Web Developer, Android Developer, dll."
+		],
+		"type": "karir",
+		"course" : [1],
+		"course2" : [1]
 	},{
 		"tag": "web_developer",
+		"tag2": "Web Developer",
 		"patterns": [
 			"Web Developer",
 			"pemrograman web"
 		],
 		"responses": [
-			"Web developer adalah role yang mengatasi masalah pada bidang web. Web Developer juga ada bagiannya loh seperti Frontend Developer dan Backend Developer, Kamu lebih suka di bagian mana nih?"
-		]
+			"Web developer adalah role yang mengatasi masalah pada bidang web. Web Developer juga ada bagiannya loh seperti Frontend Developer dan Backend Developer."
+		],
+		"type": "karir",
+		"course" : [2],
+		"course2" : [2,13,8,14]
 	},{
 		"tag": "frontend_developer",
+		"tag2": "Frontend Web Developer",
 		"patterns": [
 			"Frontend Developer",
 			"Frontend",
@@ -56,23 +97,28 @@
 			"frontend developer"
 		],
 		"responses": [
-			"Frontend Developer adalah bagian dari web developer yang tugasnya lebih ke arah tampilan yang ada di web supaya enak digunakan dan dirasakan oleh pengguna, Dasar bahasa pemrograman yang harus dikuasai oleh seorang frontend developer biasanya adalah HTML, CSS, dan Javascript. Untuk level selanjutnya kamu harus menguasai beberapa library dan framework seperti React.JS dan Vue.JS, Kira - Kira kamu ingin belajar yang Basic atau Expert nih?"
-		]
+			"Frontend Developer adalah bagian dari web developer yang tugasnya lebih ke arah tampilan yang ada di web supaya enak digunakan dan dirasakan oleh pengguna, Dasar bahasa pemrograman yang harus dikuasai oleh seorang frontend developer biasanya adalah HTML, CSS, dan Javascript. Untuk level selanjutnya kamu harus menguasai beberapa library dan framework seperti React.JS dan Vue.JS."
+		],
+		"type": "karir",
+		"course" : [3,4,6,7,8,13],
+		"course2" : [5,10,11,14]
 	},{
 		"tag": "basic_frontend",
+		"tag2": "Frontend Web Developer",
 		"patterns": [
 			"Basic Frontend Developer",
 			"Basic Frontend",
 			"Basic Front-end"
-
-
-
 		],
 		"responses": [
-			"Dasar - dasar frontend seperti membuat web sederhana yang responsive di berbagai device, kamu bisa pelajari di course Basic Frontend. "
-		]
+			"Dasar - dasar frontend seperti membuat web sederhana yang responsive di berbagai device."
+		],
+		"type": "karir",
+		"course" : [3,4,6,7,8,13],
+		"course2" : [5,10,11,14]
 	},{
 		"tag": "expert_frontend",
+		"tag2": "Frontend Web Developer",
 		"patterns": [
 			"Expert Frontend",
 			"Frontend Expert",
@@ -82,90 +128,92 @@
 		"responses": [
 			"Untuk menjadi Frontend Developer Expert kamu harus mempelajari tentang cara membangun website yang optimal pada seluruh perangkat, terutama apda perangkat mobile. Materi yang akan akan kamu pelajari adalah React.js, Progressive Web Apss, Javascript Clean Code, Automation testing, dan Web Performance.",
 			"Frontend Developer Expert kamu harus mempelajari tentang bagaimana cara membuat web app yang mobile friendly, accessible, maintainable, testable, dan high performance. Materi yang akan akan kamu pelajari adalah React.js, Progressive Web Apss, Javascript Clean Code, Automation testing, dan Web Performance."
-		]
+		],
+		"type": "karir",
+		"course" : [3,4,6,7,8,13],
+		"course2" : [5,10,11,14]
 	},{
 		"tag": "html",
+		"tag2": "Frontend Web Developer",
 		"patterns": [
 			"HTML"
 		],
 		"responses": [
 			"Hypertext Markup Language atau HTML adalah bahasa markup yang digunakan untuk membuat struktur halaman website. HTML terdiri dari kombinasi teks dan simbol yang disimpan dalam sebuah file. Dalam membuat file HTML, terdapat standar atau format khusus yang harus diikuti. Format tersebut telah tertuang dalam standar kode internasional atau ASCII (American Standard Code for Information Interchange). "
-		]
+		],
+		"type": "karir",
+		"course" : [3,4,6,7,8,13],
+		"course2" : [5,10,11,14]
 	},{
 		"tag": "css",
+		"tag2": "Frontend Web Developer",
 		"patterns": [
 			"CSS"
-
-
-
-
-
 		],
 		"responses": [
 			"CSS adalah bahasa Cascading Style Sheet dan biasanya digunakan untuk mengatur tampilan elemen yang tertulis dalam bahasa markup, seperti HTML. CSS berfungsi untuk memisahkan konten dari tampilan visualnya di situs. HTML dan CSS memiliki keterikatan yang erat. Karena HTML adalah bahasa markup (fondasi situs) dan CSS memperbaiki style (untuk semua aspek yang terkait dengan tampilan website), maka kedua bahasa pemrograman ini harus berjalan beriringan."
-		]
+		],
+		"type": "karir",
+		"course" : [3,4,6,7,8,13],
+		"course2" : [5,10,11,14]
 	},{
 		"tag": "javascript",
+		"tag2": "Web Developer",
 		"patterns": [
 			"Javascript"
-
-
-
-
-
 		],
 		"responses": [
 			"JavaScript adalah bahasa pemrograman yang digunakan dalam pengembangan website agar lebih dinamis dan interaktif. Kalau sebelumnya kamu hanya mengenal HTML dan CSS, nah sekarang kamu jadi tahu bahwa JavaScript dapat meningkatkan fungsionalitas pada halaman web. Bahkan dengan JavaScript ini kamu bisa membuat aplikasi, tools, atau bahkan game pada web.",
 			"JavaScript atau kita singkat menjadi JS merupakan bahasa pemrograman jenis interpreter, sehingga kamu tidak memerlukan compiler untuk menjalankannya. JavaScript memiliki fitur-fitur seperti berorientasi objek, client-side, high-level programming, dan loosely typed."
-
-		]
+		],
+		"type": "karir",
+		"course" : ["0"]
 	},{
 		"tag": "node_js",
+		"tag2": "Backend Web Developer",
 		"patterns": [
 			"Node.js",
 			"Node",
 			"node js"
-
-
-
 		],
 		"responses": [
 			"Node.js adalah runtime environment untuk JavaScript yang bersifat open-source dan cross-platform. Dengan Node.js kita dapat menjalankan kode JavaScript di mana pun, tidak hanya terbatas pada lingkungan browser. Node.js menjalankan V8 JavaScript engine (yang juga merupakan inti dari Google Chrome) di luar browser. Ini memungkinkan Node.js memiliki performa yang tinggi."
-
-
-		]
+		],
+		"type": "karir",
+		"course" : [2,8,13],
+		"course2" : [2,12,9,8,13]
 	},{
 		"tag": "react_js",
+		"tag2": "Frontend Web Developer",
 		"patterns": [
 			"React.js",
 			"React",
 			"react js"
-
-
-
 		],
 		"responses": [
 			"React JS adalah sebuah pustaka/library javascript yang bersifat open source untuk membangun User Interface yang dibuat oleh Facebook. React JS hanya mengurusi semua hal yang berkaitan dengan tampilan dan logika di sekitarnya.",
 			"React JS dapat mendesain tampilan sederhana untuk setiap level dalam aplikasi, sehingga dapat digunakan untuk membuat dan mengembangkan pembuatan aplikasi berbasis web. Popularitasnya dapat diukur oleh aplikasi – aplikasi yang menggunakannya seperti Facebook, WhatsApp, Netflix, Instagram, Airbnb, American Express, Dropbox, Ebay, dan ratusan penyedia jasa pembuatan aplikasi berbasis web memanfaatkan kemampuan React JS."
-
-		]
+		],
+		"type": "karir",
+		"course" : [3,4,6,7,8,13],
+		"course2" : [5,10,11,14]
 	},{
 		"tag": "vue_js",
+		"tag2": "Frontend Web Developer",
 		"patterns": [
 			"Vue.js",
 			"Vue",
 			"vue js"
-
-
-
 		],
 		"responses": [
 			"Vue (cara pengucapannya /vjuː/, seperti view) adalah sebuah kerangka kerja nan progresif untuk membangun antarmuka pengguna. Tidak seperti beberapa kerangka kerja monolitik yang lain, Vue dirancang dari dasar sekali agar dapat diadopsi secara bertahap. Pustaka intinya difokuskan pada layer tampilan saja, dan sangat mudah untuk diintegrasikan dengan pustaka yang lain atau dengan proyek yang sudah ada. Di sisi lain, Vue sangat mampu memberikan dan mendukung Single Page Application yang canggih ketika dikombinasikan dengan perkakas modern dan dukungan pustaka."
-
-
-		]
+		],
+		"type": "karir",
+		"course" : [3,4,6,7,8,13],
+		"course2" : [5,10,11,14]
 	},{
 		"tag": "express_js",
+		"tag2": "Backend Web Developer",
 		"patterns": [
 			"Express.js",
 			"Express",
@@ -173,98 +221,74 @@
 		],
 		"responses": [
 			"Express JS adalah framework dari NodeJS yang dirancang secara fleksibel dan sederhana untuk membantu tahap pengembangan aplikasi back end. Express JS juga sangat berbeda dengan framework Laravel, dimana library ini memberikan kebebasan bagi para developer untuk mendesain aplikasi, sehingga memungkinan bagi setiap pengembang memiliki rancangan arsitektur yang berbeda dalam software yang dibangun."
-
-
-		]
+		],
+		"type": "karir",
+		"course" : [2,8,13],
+		"course2" : [2,12,9,8,13]
 	},{
 		"tag": "sql",
+		"tag2": "Backend Web Developer",
 		"patterns": [
 			"SQL",
 			"SQL",
 			"sql"
-
-
-
 		],
 		"responses": [
 			"SQL atau Standard Query Language adalah bahasa pemrograman yang digunakan dalam mengakses, mengubah, dan memanipulasi data yang berbasis relasional."
-
-
-		]
-	},{
-		"tag": "git",
-		"patterns": [
-			"Git",
-			"Github",
-			"Gitlab"
-
-
-
 		],
-		"responses": [
-			"Git adalah salah satu sistem pengontrol versi (Version Control System) pada proyek perangkat lunak yang diciptakan oleh Linus Torvalds. Pengontrol versi bertugas mencatat setiap perubahan pada file proyek yang dikerjakan oleh banyak orang maupun sendiri. Git dikenal juga dengan distributed revision control (VCS terdistribusi), artinya penyimpanan database Git tidak hanya berada dalam satu tempat saja."
-
-
-		]
+		"type": "karir",
+		"course" : [2,8,13],
+		"course2" : [2,12,9,8,13]
 	},{
 		"tag": "typescript",
+		"tag2": "Web Developer",
 		"patterns": [
 			"Typescript",
 			"TS"
-
-
-
-
 		],
 		"responses": [
 			"Typescript adalah bahasa pemrograman berbasis JavaScript yang menambahkan fitur strong-typing & konsep pemrograman OOP klasik ( class, interface). Di dalam dokumentasinya, TypeScript disebut sebagai super-set dari JavaScript, artinya semua kode JavaScript adalah kode TypeScript juga. Bahasa pemrograman ini menawarkan class, module, dan interface yang membuat developer bisa mengembangkan aplikasi kompleks dengan lebih mudah. Hal inilah yang membedakannya dengan javascript."
-
-
-		]
+		],
+		"type": "karir",
+		"course" : [2],
+		"course2" : [2,13,8,14]
 	},{
 		"tag": "data_science",
+		"tag2": "Data Scientist",
 		"patterns": [
 			"data science"
-
-
-
-
-
 		],
 		"responses": [
 			"Data science menjadi sebuah istilah yang sangat penting dalam fenomena big data ini, bagaimana cara mengolah data yang begitu besar yang dihasilkan dalam internet dapat dikelola dan dianalisa dengan baik sehingga dapat menjadi sebuah data prediksi yang lebih akurat dengan data sebenarnya.Data science merupakan sebuah cabang ilmu yang mengggabungkan ilmu inferensi data, penggabungan algoritmik dan penggunaan teknologi untuk memecahkan masalah analitik yang kompleks"
-
-
-		]
+		],
+		"type": "karir",
+		"course" : [15],
+		"course2" : [15,16]
 	},{
 		"tag": "machine_learning",
+		"tag2": "AI Engineer",
 		"patterns": [
-			"machine learning",
-			"pembelajaran mesin"
-
-
-
-
+			"machine learning"
 		],
 		"responses": [
 			"Machine learning dapat diartikan bagaimana data tersebut digunakan, dikelola hingga diprediksi dengan algoritma machine learning. Machine learning tak ubahnya sebuah robot yang harus dilatih terus menerus hingga menjadi sebuah robot yang pintar. Dalam machine learning data latih menjadi data yang sangat penting dalam hasil pengujian atau prediksinya. Semakin banyak data yang dilatih maka, mesin akan menjadi semakin pintar."
-
-
-		]
+		],
+		"type": "karir",
+		"course" : [16],
+		"course2" : [15,16]
 	},{
 		"tag": "android_developer",
+		"tag2": "Android Developer",
 		"patterns": [
 			"android developer",
 			"mobile android",
 			"pemrograman android"
-
-
-
 		],
 		"responses": [
 			"Android Developer adalah Software Developer yang berspesialisasi dalam merancang dan membangun aplikasi untuk pasar operating system Android. Menurut Google, sebagai pemilik dari Android, seorang Android Developer harus memiliki keahlian dalam app functionality, user interface, data management, debugging dan testing. Mereka juga memiliki kemampuan dengan setidaknya bahasa pemrograman Java atau Kotlin walaupun industri merekomendasikan seorang Android Developer dapat menggunakan keduanya. Dan saat ini penguasaan terhadap Jetpack juga sudah menjadi kewajiban untuk mengoptimalkan proses mengembangkan aplikasi Android."
-
-
-		]
+		],
+		"type": "karir",
+		"course" : [17],
+		"course2" : [17]
 	}
 ]}

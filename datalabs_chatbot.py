@@ -35,19 +35,40 @@ def get_chat_response(sentence):
     :return: type string, jawaban dari chatbot
     '''
     intent_list = _predict_answer(sentence)
+
+    chat_response = fallback_intent
+    _type = "ngawur"
+    tag = "ngawur"
+    course = [1]
+    course2 = [1]
+    response_final = {"res": chat_response,
+                      "type": _type,
+                      "tag": tag,
+                      "course": course,
+                      "course2": course2}
     if len(intent_list) == 0:
-        return fallback_intent
+        return response_final
     print(intent_list)
     tag = intent_list[0]['intent']
     chat_response = ""
     for i in intents['intents']:
         if tag == i['tag']:
             chat_response = random.choice(i['responses'])
+            _type = i['type']
+            tag = i['tag']
+            course = i['course']
+            course2 = i['course2']
             break
-    return chat_response
+    response_final = {"res": chat_response,
+                      "type": _type,
+                      "tag": tag,
+                      "course": course,
+                      "course2": course2}
+
+    return response_final
 
 
-# untuk testing chatbot
+# # untuk testing chatbot
 # while True:
 #     message = input("")
 #     print(get_chat_response(message))
