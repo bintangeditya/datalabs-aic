@@ -26,6 +26,7 @@ def predict():
         "res": res["res"],
         "type" : res["type"],
         "tag" : res["tag"],
+        "tag2": res["tag2"],
         "course": res["course"],
         "course2": res["course2"],
         "status": "success"
@@ -41,6 +42,7 @@ def predict_chatbot_deteksi_background():
         "res": res["res"],
         "type" : res["type"],
         "tag" : res["tag"],
+        "tag2": res["tag2"],
         "course": res["course"],
         "course2": res["course2"],
         "status": "success"
@@ -56,6 +58,7 @@ def predict_chatbot_deteksi_ya_tidak():
         "res": res["res"],
         "type" : res["type"],
         "tag" : res["tag"],
+        "tag2": res["tag2"],
         "course": res["course"],
         "course2": res["course2"],
         "status": "success"
@@ -71,6 +74,7 @@ def predict_chatbot_deteksi_bahasa():
         "res": res["res"],
         "type" : res["type"],
         "tag" : res["tag"],
+        "tag2": res["tag2"],
         "course": res["course"],
         "course2": res["course2"],
         "status": "success"
@@ -86,6 +90,7 @@ def chatbot_deteksi_ya_tidak_karir():
         "res": res["res"],
         "type" : res["type"],
         "tag" : res["tag"],
+        "tag2": res["tag2"],
         "course": res["course"],
         "course2": res["course2"],
         "status": "success"
